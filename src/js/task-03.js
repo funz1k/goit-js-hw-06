@@ -14,7 +14,6 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery')
-console.log(galleryList);
 
 const markup = images.map((element) => {
   return `
@@ -23,5 +22,5 @@ const markup = images.map((element) => {
   </li>
   `
 }).join('');
-console.log(markup);
+
 galleryList.insertAdjacentHTML('afterbegin', markup)
