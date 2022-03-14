@@ -7,7 +7,6 @@ const onFormSubmit = (event) => {
     event.preventDefault();
 
     const formElement = event.currentTarget.elements;
-    
     const email = formElement.email.value;
     const password = formElement.password.value;
 
