@@ -52,7 +52,10 @@ img {
   margin-right: 10px;
 }
 
-#boxes :not(:last-child) {
+#boxes > div {
   margin: 0 auto;
+}
+
+#boxes :not(:last-child) {
   margin-bottom: 10px;
 }
