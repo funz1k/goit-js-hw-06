@@ -28,10 +28,15 @@ function getRandomHexColor() {
 const onCreateTargetClick = (event) => {
   const boxesValue = refs.input.value
   createBoxes(boxesValue)
+  formReset()
 }
 
 const onDestroyTargetClick = (event) => {
   refs.divContainer.innerHTML = ''
+}
+
+const formReset = () => {
+  refs.input.value = ''
 }
 
 refs.createBtn.addEventListener('click', onCreateTargetClick);

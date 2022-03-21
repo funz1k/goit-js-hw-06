@@ -24,7 +24,7 @@ const onFormSubmit = (event) => {
 }
 
 const formReset = () => {
-    refs.loginForm.reset()
+    event.currentTarget.reset()
 }
 
 refs.loginForm.addEventListener('submit', onFormSubmit);

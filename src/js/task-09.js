@@ -4,17 +4,19 @@ const refs = {
   body: document.querySelector('body'),
 }
 
-const onChangeTargetClick = (event) => {
-  refs.colorName.textContent = getRandomHexColor();
-  changeBodyColor();
-};
-
-const changeBodyColor = () => {
-  refs.body.style.backgroundColor = getRandomHexColor();
-};
-
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+};
+
+const onChangeTargetClick = (event) => {
+  const colorHex = refs.colorName.textContent = getRandomHexColor();
+  changeBodyColor(colorHex);
+  console.log(colorHex);
+};
+
+const changeBodyColor = (value) => {
+  refs.body.style.backgroundColor = value;
+  console.log(value);
 };
 
 refs.changeColorBtn.addEventListener('click', onChangeTargetClick);

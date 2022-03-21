@@ -1,6 +1,6 @@
 const decrementBtn = document.querySelector('#counter button[data-action="decrement"]')
 const incrementBtn = document.querySelector('#counter button[data-action="increment"]')
-
+const valueDisplay =  document.querySelector('#value')
 let count = 0;
 
 
@@ -13,6 +13,6 @@ incrementBtn.addEventListener('click', () => {
 })
 
 const updateDisplay = (value) => {
-    document.querySelector('#value').textContent = count
+    valueDisplay.textContent = count
 }
 
