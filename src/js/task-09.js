@@ -9,7 +9,8 @@ function getRandomHexColor() {
 };
 
 const onChangeTargetClick = (event) => {
-  const colorHex = refs.colorName.textContent = getRandomHexColor();
+  const colorHex = getRandomHexColor();
+  refs.colorName.textContent = colorHex;
   changeBodyColor(colorHex);
   console.log(colorHex);
 };

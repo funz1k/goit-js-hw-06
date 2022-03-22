@@ -4,9 +4,11 @@ const refs = {
 }
 
 const onInputChange = (event) => {
-    if (event.currentTarget.value === '') {
+    const currentEvent = event.currentTarget.value
+    // let regexp = / /gm;
+    if (currentEvent.trim() === '' || currentEvent === '') {
         return refs.output.textContent = 'Anonymous'
-    } else refs.output.textContent = event.currentTarget.value
+    } else refs.output.textContent = currentEvent
 
 }
 
